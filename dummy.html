@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience Section</title>
+  <style>
+    /* General Styles */
+    #body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #experience {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding: 0 15px;
+    }
+
+    #experience-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    #card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; /* Apply space around */
+    }
+
+    #card {
+      background-color: #343a40;
+      color: #fff;
+      width: 100%;
+      max-width: 420px; /* Slightly increased card width */
+      margin-bottom: 20px;
+      border-radius: 12px; /* Added border radius */
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      padding: 20px; /* Increased padding for better readability */
+    }
+
+    /* Image styling */
+    #card-img {
+      width: 100%;
+      height: 200px; /* Default height for the image */
+      object-fit: contain; /* Ensure the full image is displayed */
+      border-radius: 8px; /* Rounded image corners */
+      display: block;
+    }
+
+    /* Card content styling */
+    #card-body {
+      padding: 20px 0; /* Increased padding */
+    }
+
+    #card-body-heading {
+      margin-top: 0;
+    }
+
+    #card-body-text {
+      text-align: justify;
+      margin: 0;
+    }
+
+    #card-body-ul {
+      margin-left: 20px;
+      list-style-type: square; /* Square list items */
+    }
+
+    /* Button styling */
+    #learn-more-btn {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px; /* Increased padding */
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 15px;
+      border: none; /* Remove default button border */
+      cursor: pointer; /* Pointer cursor on hover */
+    }
+
+    #learn-more-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive layout for large, medium, and small screens */
+    @media (min-width: 768px) {
+      #card {
+        width: 48%; /* Two cards per row on medium screens */
+      }
+
+      /* Adjust image height on medium screens */
+      #card-img {
+        height: 180px;
+      }
+
+      /* Reduce button size on medium screens */
+      #learn-more-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
+    }
+
+    @media (min-width: 992px) {
+      #card {
+        width: 30%; /* Three cards per row on large screens */
+      }
+
+      /* Further reduce image height on large screens */
+      #card-img {
+        height: 160px;
+      }
+
+      /* Further reduce button size on large screens */
+      #learn-more-btn {
+        padding: 6px 12px;
+        font-size: 0.85em;
+      }
+    }
+  </style>
+</head>
+<body id="body">
+  <section id="experience">
+    <h2 id="experience-heading">EXPERIENCE</h2>
+    <div id="card-container">
+      <!-- First Card -->
+      <div id="card">
+        <img id="card-img" src="https://via.placeholder.com/300x200" alt="Card Image 1">
+        <div id="card-body">
+          <h5 id="card-body-heading">Software Engineer Intern</h5>
+          <p id="card-body-text"><strong>Duration:</strong> Feb 2024 - May 2024 · 4 months</p>
+          <p id="card-body-text"><strong>Location:</strong> Hyderabad, Telangana, India</p>
+          <p id="card-body-text"><strong>Responsibilities:</strong></p>
+          <ul id="card-body-ul">
+            <li id="card-body-text">Worked with the Data Analysis team to process and analyze large datasets.</li>
+            <li id="card-body-text">Utilized tools like MS Excel, Python, Pandas, Matplotlib, and Seaborn for data visualization and reporting.</li>
+            <li id="card-body-text">Collaborated with team members to provide data-driven insights for business decisions.</li>
+          </ul>
+          <p id="card-body-text"><strong>Skills:</strong> Data Analysis, Python, Pandas, Data Visualization</p>
+          <button id="learn-more-btn">Learn More</button>
+        </div>
+      </div>
+
+      <!-- Second Card -->
+      <div id="card">
+        <img id="card-img" src="./bootstrap.png" alt="Card Image 2">
+        <div id="card-body">
+          <h5 id="card-body-heading">Frontend Developer Intern</h5>
+          <p id="card-body-text"><strong>Duration:</strong> Jan 2024 - April 2024 · 3 months</p>
+          <p id="card-body-text"><strong>Location:</strong> Bengaluru, Karnataka, India</p>
+          <p id="card-body-text"><strong>Responsibilities:</strong></p>
+          <ul id="card-body-ul">
+            <li id="card-body-text">Developed user interfaces using React.js and JavaScript.</li>
+            <li id="card-body-text">Ensured cross-browser compatibility and responsiveness.</li>
+            <li id="card-body-text">Collaborated with UI/UX designers to implement modern design principles.</li>
+          </ul>
+          <p id="card-body-text"><strong>Skills:</strong> React.js, JavaScript, HTML, CSS, UI/UX Design</p>
+          <button id="learn-more-btn">Learn More</button>
+        </div>
+      </div>
+
+      <!-- Third Card -->
+      <div id="card">
+        <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
+        <div id="card-body">
+          <h5 id="card-body-heading">Data Scientist Intern</h5>
+          <p id="card-body-text"><strong>Duration:</strong> Mar 2024 - June 2024 · 3 months</p>
+          <p id="card-body-text"><strong>Location:</strong> Mumbai, Maharashtra, India</p>
+          <p id="card-body-text"><strong>Responsibilities:</strong></p>
+          <ul id="card-body-ul">
+            <li id="card-body-text">Built predictive models using machine learning techniques.</li>
+            <li id="card-body-text">Cleaned and preprocessed large datasets using Python and Pandas.</li>
+            <li id="card-body-text">Created visualizations and reports to present data insights to stakeholders.</li>
+          </ul>
+          <p id="card-body-text"><strong>Skills:</strong> Machine Learning, Python, Pandas, Data Visualization</p><br>
+          <button id="learn-more-btn">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

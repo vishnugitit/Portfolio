@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Contact Section Styling */
+        .contact-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+
+        .contact-section .form-control {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .contact-section .btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .contact-section .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .confirmation-message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: green;
+            font-weight: bold;
+        }
+
+        /* Modal Styling */
+        .modal-body ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .modal-body ul li {
+            padding: 10px 0;
+        }
+        .modal-body ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .modal-body ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Icons Styling */
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info a {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover .contact-icon {
+            color: #0056b3;
+        }
+
+        /* Hover effect for input fields and textarea */
+        input:hover, textarea:hover {
+            border: 3px solid black;
+            transition: border-color 0.3s ease; /* Smooth transition */
+        }
+
+        /* Add styling for the quote */
+        .contact-quote {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-align: center;
+        }
+        .contact-connect {
+    font-size: 1.5rem;
+    font-weight: 300; /* Corrected the font-weight syntax */
+    margin-bottom: 20px;
+    color: black;
+    text-align: center; /* Centering the text */
+}
+    </style>
+</head>
+<body>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            
+            <!-- Add the quote here -->
+            <p class="contact-quote">Let's Connect and Create Something Amazing!</p>
+            <p class="contact-connect">"Feel Free to Reach Out – I’m Just a Message Away!"</p>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <div id="confirmationMessage" class="confirmation-message"></div>
+
+            <hr>
+
+            <!-- Button to open modal with contact info -->
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#contactModal">
+                More Contact Info
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal for Contact Info -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Info</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You can reach me through the following:</p>
+                    <ul>
+                        <li class="contact-info">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span><strong>Email:</strong> your-email@example.com</span>
+                        </li>
+                        <li class="contact-info">
+                            <i class="fab fa-linkedin contact-icon"></i>
+                            <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com" target="_blank">LinkedIn Profile</a></span>
+                        </li>
+                        <li class="contact-info">
+                            <i class="fab fa-github contact-icon"></i>
+                            <span><strong>GitHub:</strong> <a href="https://github.com" target="_blank">GitHub Profile</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent form from submitting
+
+            // Get values from form inputs
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Validate the inputs (basic validation)
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Create an object to store in local storage
+            const applicantData = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            // Save data to local storage
+            localStorage.setItem("applicantData", JSON.stringify(applicantData));
+
+            // Show confirmation message
+            document.getElementById("confirmationMessage").textContent = "Thank you for reaching out! Your details have been saved.";
+
+            // Optionally, clear the form
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

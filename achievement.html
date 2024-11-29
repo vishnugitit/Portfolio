@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styling */
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transition: opacity 0.3s ease, border 0.3s ease;
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .card-img-top:hover {
+            opacity: 0.8;
+            border: 4px solid black;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            text-align: justify;
+        }
+
+        .btn-custom {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #45a049;
+        }
+
+        .card-header {
+            background-color: #f1f1f1;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .card-body p {
+                font-size: 0.9rem;
+            }
+
+            .btn-custom {
+                width: 100%;
+            }
+
+            .card-img-top {
+                max-height: 150px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-body {
+                padding: 1rem;
+            }
+
+            .card-header {
+                font-size: 1rem;
+            }
+
+            .card-img-top {
+                max-height: 120px;
+            }
+        }
+
+        .container {
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="container">
+        <h2 class="section-title">ACHIEVEMENTS</h2>
+
+        <!-- Certificate Cards -->
+        <div class="row justify-content-center">
+            <!-- Cloud Computing Certificate -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="./image5.jpeg" class="card-img-top" alt="Cloud Computing Certificate">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Elite NPTEL Certification in Cloud Computing</h5>
+                        <p><strong>Course:</strong> Cloud Computing (Jan-Apr 2024)</p>
+                        <p><strong>Score:</strong> 66% (Online Assignments: 24.38/25, Proctored Exam: 41.33/75)</p>
+                        <p><strong>Issued By:</strong> Prof. Haimanti Banerji, Coordinator, NPTEL, IIT Kharagpur</p>
+                        <p><strong>Total Certified:</strong> 23,872 Candidates</p>
+                        <p><strong>Credits Recommended:</strong> 3 or 4</p>
+                        <p><strong>Roll No:</strong> NPTEL24CS17S363700436</p>
+                        <button class="btn btn-custom">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industry 4.0 Certificate -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="./image5.jpeg" class="card-img-top" alt="Industry 4.0 Certificate">
+                    <div class="card-body">
+                        <h5 class="card-title">Elite NPTEL Certification in Industry 4.0 and Industrial Internet of Things</h5>
+                        <p><strong>Course:</strong> Introduction to Industry 4.0 and Industrial Internet of Things (Jan-Apr 2024)</p>
+                        <p><strong>Score:</strong> 79% (Online Assignments: 24.78/25, Proctored Exam: 54/75)</p>
+                        <p><strong>Issued By:</strong> Prof. Haimanti Banerji, Coordinator, NPTEL, IIT Kharagpur</p>
+                        <p><strong>Total Certified:</strong> 10,498 Candidates</p>
+                        <p><strong>Credits Recommended:</strong> 3 or 4</p>
+                        <p><strong>Roll No:</strong> NPTEL24CS345563700450</p>
+                        <a href="#" class="btn btn-custom">Verify Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Internship Certificate -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="./image5.jpeg" alt="Internship Certificate" class="card-img-top">
+                    <div class="card-header">
+                        Internship Certificate - Data Analysis
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Name:</strong> Jangam Vishnuvardhan Babu</p>
+                        <p><strong>Internship Topic:</strong> Data Analysis</p>
+                        <p><strong>Organization:</strong> Codegnan IT Solutions Pvt Ltd</p>
+                        <p><strong>Duration:</strong> 240 hours</p>
+                        <p><strong>Certificate Date:</strong> 15-04-2024</p>
+                        <p><strong>Issued By:</strong> K. Saketh, Co-Founder & CMO, Codegnan IT Solutions Pvt Ltd</p>
+                        <p>The certificate is issued by the Andhra Pradesh State Council of Higher Education.</p>
+                        <a href="#" class="btn btn-custom">Download Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row of Certificates -->
+        <div class="row justify-content-center">
+            <!-- Quiz Certificate -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="./image5.jpeg" alt="CareerNinja Quiz Certificate" class="card-img-top">
+                    <div class="card-header">
+                        CareerNinja Quiz Certificate - Java Basic Quiz
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Name:</strong> Jangam Vishnu Vardhan Babu</p>
+                        <p><strong>Quiz:</strong> Java Basic Quiz</p>
+                        <p><strong>Organized by:</strong> CareerNinja</p>
+                        <p><strong>Certificate ID:</strong> JAV20236765X</p>
+                        <p><strong>Issued By:</strong> Shronit Ladhani, Founder and CEO, CareerNinja</p>
+                        <p><strong>Date:</strong> 8/29/2023</p>
+                        <p><strong>Platform:</strong> LearnTube by CareerNinja</p>
+                        <a href="#" class="btn btn-custom">Download Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Training Certificate -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="./image5.jpeg" alt="Besant Technologies Python Certificate" class="card-img-top">
+                    <div class="card-header">
+                        Certificate of Completion - Python Training
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Name:</strong> J. Vishnu Vardhan</p>
+                        <p><strong>Course:</strong> Python Training</p>
+                        <p><strong>Certificate ID:</strong> BTFT 36306</p>
+                        <p><strong>Date:</strong> 20-11-2024</p>
+                        <a href="#" class="btn btn-custom">Download Certificate</a>
+                    </div>
+                </div>
+            </div>
+                 <!-- IoT Training Certificate -->
+                 <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="./image5.jpeg" alt="IoT Training Certificate" class="card-img-top">
+                        <div class="card-header">
+                            IoT Training Certificate
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Name:</strong> Jangam Vishnuvardhan Babu</p>
+                            <p><strong>Course:</strong> IoT Fundamentals</p>
+                            <p><strong>Issued By:</strong> XYZ IoT Training Institute</p>
+                            <a href="#" class="btn btn-custom">Download Certificate</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
