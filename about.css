@@ -1,0 +1,134 @@
+/* About Styling */
+header{
+    padding: 4rem 1rem; /* Adjust padding for header */
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for header */
+}
+
+.container-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%; /* Ensure container takes full height */
+    max-width: 1200px; /* Max width for large screens */
+    width: 100%; /* Full width */
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff9800;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff9800;
+    margin: 0.5rem auto;
+    border-radius: 3px;
+  }
+
+  /* About Content */
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    animation: fadeIn 1s ease-in-out;
+    width: 100%;
+    flex-wrap: wrap; /* Allow the flex items to wrap on smaller screens */
+  }
+
+  .about-text {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .about-text:hover {
+    transform: translateX(10px);
+    color: #ff9800;
+    cursor: pointer;
+  }
+
+  .about-image {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 400px; /* Adjust max width for large screens */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  /* FadeIn Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .about-content {
+      flex-direction: column-reverse; /* Switch to column layout with image below text */
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      max-width: 80%; /* Make image smaller on medium screens */
+      margin-bottom: 1rem;
+    }
+
+    .about-text {
+      text-align: justify;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .about-image {
+      max-width: 90%; /* Adjust image size for smaller screens */
+    }
+
+    .about-text {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .about-text {
+      font-size: 0.9rem;
+    }
+
+    .about-image {
+      max-width: 100%; /* Ensure image fills the screen width on small screens */
+    }
+  }
+
+
+
+
+
+

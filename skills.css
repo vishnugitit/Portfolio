@@ -1,0 +1,123 @@
+/*  Skills Styling */
+
+#skills {
+    background-color: #1e1e2f;
+    color: #f8f9fa;
+    padding: 3rem 1rem;
+    border-radius: 10px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff9800;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff9800;
+    margin: 0.5rem auto;
+    border-radius: 3px;
+  }
+
+  /* Skill Cards */
+  .card {
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+    text-align: center;
+    max-width: 150px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-img-top {
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .card:hover .card-img-top {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+
+  /* Hover Text Above Card */
+  .card-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hover-text {
+    position: absolute;
+    top: -30px; /* Place text above the card */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for readability */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 400; /* Lightweight font */
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    z-index: 2;
+  }
+
+
+
+  .card-container:hover .hover-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px); /* Smooth animation */
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .card-img-top {
+      max-width: 70%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    #skills {
+      padding: 2rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+    }
+
+    .card-img-top {
+      max-width: 60%;
+    }
+  }
+  

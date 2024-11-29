@@ -1,0 +1,63 @@
+  /* Navbar Styling */
+  .navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f9fa;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .navbar .navbar-brand:hover {
+    color: #ff9800;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #dcdcdc;
+    text-align: justify; /* Apply justify alignment */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar .nav-link:hover {
+    color: #ff9800;
+    transform: scale(1.1);
+  }
+
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    outline: none;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-toggler:hover {
+    transform: rotate(90deg);
+  }
+
+  .navbar-collapse {
+    transition: all 0.5s ease;
+  }
+
+  .navbar-nav {
+    gap: 15px;
+  }
+
+  @media (max-width: 991px) {
+    .navbar-nav .nav-link {
+      text-align: justify; /* Keep justify for smaller screens */
+      padding: 10px 0;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+  }

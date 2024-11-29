@@ -77,11 +77,14 @@
         }
       }
        /* Header Styling */
-       #home {
+        #home {
         background-color: #1e1e2f; /* Dark background */
         color: #f8f9fa; /* Light text */
-        padding: 2rem 0;
-     
+        padding: 0; /* Remove padding to cover full height */
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
       }
 
       #home .text-section {
@@ -153,6 +156,7 @@
       }
 
       /* Media Queries */
+      /* Large Screen */
       @media (min-width: 992px) {
         #home .content {
           display: flex;
@@ -167,8 +171,13 @@
         #home .image-section {
           width: 35%;
         }
+
+        #home p {
+          text-align: justify; /* Ensure text is justified */
+        }
       }
 
+      /* Medium Screen */
       @media (max-width: 991px) {
         #home h1 {
           font-size: 2.5rem;
@@ -177,8 +186,26 @@
         #home p {
           font-size: 1rem;
         }
+
+        #home .content {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #home .text-section {
+          width: 80%; /* Adjust text width */
+        }
+
+        #home .image-section {
+          margin-top: 1rem;
+        }
+
+        #home p {
+          text-align: justify; /* Ensure text is justified */
+        }
       }
 
+      /* Small Screen */
       @media (max-width: 576px) {
         #home h1 {
           font-size: 2rem;
@@ -191,23 +218,41 @@
         #home img {
           max-width: 300px;
         }
-      }
-        /* General Styles */
-        body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f9fa;
+
+        #home .content {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #home .text-section {
+          width: 90%; /* Adjust text width for small screens */
+        }
+
+        #home p {
+          text-align: justify; /* Ensure text is justified */
+        }
       }
 
       /* About Section */
-      #about {
-        /* padding: 3rem 1rem; */
+          /* About Section */
+          header {
+        padding: 4rem 1rem; /* Adjust padding for header */
         background-color: #ffffff;
         color: #333;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        /* margin: 3rem 0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full height for header */
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%; /* Ensure container takes full height */
+        max-width: 1200px; /* Max width for large screens */
+        width: 100%; /* Full width */
       }
 
       .section-title {
@@ -235,6 +280,8 @@
         align-items: center;
         gap: 2rem;
         animation: fadeIn 1s ease-in-out;
+        width: 100%;
+        flex-wrap: wrap; /* Allow the flex items to wrap on smaller screens */
       }
 
       .about-text {
@@ -255,15 +302,11 @@
       .about-image {
         flex-shrink: 0;
         width: 100%;
-        max-width: 300px;
+        max-width: 400px; /* Adjust max width for large screens */
         height: auto;
         border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .about-image:hover {
-        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       }
 
       /* FadeIn Animation */
@@ -281,12 +324,13 @@
       /* Responsive Design */
       @media (max-width: 992px) {
         .about-content {
-          flex-direction: column;
+          flex-direction: column-reverse; /* Switch to column layout with image below text */
           align-items: center;
         }
 
         .about-image {
-          max-width: 80%;
+          width: 100%;
+          max-width: 80%; /* Make image smaller on medium screens */
           margin-bottom: 1rem;
         }
 
@@ -301,7 +345,7 @@
         }
 
         .about-image {
-          width: 80%;
+          max-width: 90%; /* Adjust image size for smaller screens */
         }
 
         .about-text {
@@ -315,7 +359,7 @@
         }
 
         .about-image {
-          width: 150px;
+          max-width: 100%; /* Ensure image fills the screen width on small screens */
         }
       }
        /* Education Section Styling */
@@ -573,8 +617,9 @@
       /* Achievements */
 
         /* Contact */
-            /* Contact Section Styling */
-            .contact-section {
+           
+        /* Contact Section Styling */
+        .contact-section {
             padding: 60px 0;
             background-color: #f8f9fa;
         }
@@ -670,7 +715,7 @@
     
     </style>
   </head>
-  <body>
+  <body id="body">
     <div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -718,8 +763,9 @@
       </div>
     </nav>
     <!-- Header Section -->
+
     <header id="home" class="container-fluid">
-      <div class="container" >
+      <div class="container">
         <div class="content">
           <!-- Text Section -->
           <div class="text-section">
@@ -739,63 +785,36 @@
         </div>
       </div>
     </header>
+
+
+   
+
+
  <!-- About Section -->
- <section id="about" class="container" >
-  <h2 class="section-title">About Me</h2>
-  <div class="about-content" >
-    <!-- Text Content -->
-    <div class="about-text">
-      <p>
-        Hi, I'm a passionate web developer with experience in building
-        scalable, high-performance web applications. I specialize in
-        frontend development, using technologies like HTML, CSS, JavaScript,
-        and React. I strive to create engaging user experiences with clean
-        and responsive designs. My goal is to continuously learn and improve
-        my skills, making a meaningful impact with my work.
-      </p>
-    </div>
 
-    <!-- Image -->
-    <div class="about-image">
-      <img src="./image4.jpeg" alt="About Me" class="img-fluid" />
-    </div>
-  </div>
-</section>
- <!-- Education Section -->
- <section id="education" class="container mt-5">
-  <h2 class="section-title">Education</h2>
-  <div class="timeline">
-    <!-- Bachelor's Degree -->
-    <div class="timeline-item">
-      <div class="timeline-icon">🎓</div>
-      <div class="timeline-content">
-        <strong>Bachelor's Degree in Computer Science & Engineering</strong>
-        <p>Visvodaya Engineering College (2020 - 2024)</p>
-        <p>CGPA: 7.5</p>
+ <header>
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <!-- Text Content -->
+      <div class="about-text">
+        <p>
+          Hi, I'm a passionate web developer with experience in building
+          scalable, high-performance web applications. I specialize in
+          frontend development, using technologies like HTML, CSS, JavaScript,
+          and React. I strive to create engaging user experiences with clean
+          and responsive designs. My goal is to continuously learn and improve
+          my skills, making a meaningful impact with my work.
+        </p>
       </div>
-    </div>
 
-    <!-- High School -->
-    <div class="timeline-item">
-      <div class="timeline-icon">🏫</div>
-      <div class="timeline-content">
-        <strong>High School, Board of Intermediate Education</strong>
-        <p>Completed in 2020</p>
-        <p>CGPA: 8.3</p>
-      </div>
-    </div>
-
-    <!-- Secondary School -->
-    <div class="timeline-item">
-      <div class="timeline-icon">📘</div>
-      <div class="timeline-content">
-        <strong>Secondary School, Board of Secondary Education</strong>
-        <p>Completed in 2018</p>
-        <p>CGPA: 8.8</p>
+      <!-- Image -->
+      <div class="about-image">
+        <img src="./css.png" alt="About Me" class="img-fluid" />
       </div>
     </div>
   </div>
-</section>
+</header>
   <!-- Skills Section -->
   <section id="skills" class="container mt-5">
     <h2 class="section-title">Skills</h2>
@@ -1002,111 +1021,115 @@
      
   <!-- Achievements Section -->
 
-  <section id="achievements">
-    <h2 id="experience-heading">ACHIEVEMENTS</h2>
-    <div id="card-container">
-      <!-- First Card -->
-      <div id="card">
-        <img id="card-img" src="https://via.placeholder.com/300x200" alt="Card Image 1">
-        <div id="card-body">
-          <h5 id="card-body-heading">Cloud Computing
-          </h5>
-          <p id="card-body-text"><strong>Course:</strong>  Cloud Computing </p><br>
-          <p id="card-body-text"><strong>Score:</strong> 66% </p><br>
-          <p id="card-body-text"><strong>Issued By:</strong>  NPTEL, IIT Kharagpur</p><br>
-         
-          <p id="card-body-text"><strong>Total Certified:</strong> 23,872 Candidates</p><br>
- 
-          <p id="card-body-text"><strong>Roll No:</strong> NPTEL24CS17S363700436</p>
-          <button id="learn-more-btn">View Certificate</button>
-        </div>
-      </div>
-
-      <!-- Second Card -->
-      <div id="card">
-        <img id="card-img" src="https://via.placeholder.com/300x200" alt="Card Image 1">
-        <div id="card-body">
-          <h5 id="card-body-heading">Industry 4.0 and Industrial Internet of Things
-          </h5>
-          <p id="card-body-text"><strong>Course:</strong>   Introduction to Industry 4.0 and Industrial Internet of Things </p><br>
-          <p id="card-body-text"><strong>Score:</strong>  79% </p><br>
-          <p id="card-body-text"><strong>Issued By:</strong>  NPTEL, IIT Kharagpur</p><br>
-         
-          <p id="card-body-text"><strong>Total Certified:</strong> 10,498 Candidates</p><br>
- 
-          <p id="card-body-text"><strong>Roll No:</strong> NPTEL24CS345563700450</p>
-          <button id="learn-more-btn">View Certificate</button>
-        </div>
-      </div>
-      <!-- Third  -->
-      <div id="card">
-        <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
-        <div id="card-body">
-          <h5 id="card-body-heading">Data Analysis</h5>
-
-          <p id="card-body-text"><strong>Internship:</strong> Data Analysis</p><br>
-          <p id="card-body-text"><strong>Organization:</strong> Codegnan IT Solutions Pvt Ltd</p><br>
-          
-          <p id="card-body-text"><strong>Duration:</strong> 240 hours</p><br>
-          <p id="card-body-text"><strong>Certificate Date:</strong> 15-04-2024</p><br>
-          <p id="card-body-text"><strong>Certificate ID:</strong> 204N1A3515</p><br>
-          <p id="card-body-text"><strong>Issued By:</strong> APSCHE</p>
-          <button id="learn-more-btn">View Certificate</button>
-        </div>
-      </div>
-   
-      <!-- Fourth Card -->
-      <div id="card">
-        <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
-        <div id="card-body">
-          <h5 id="card-body-heading" >Web Development</h5>
-        
-          <p id="card-body-text"><strong>Internship:</strong> Web Development</p><br>
-          <p id="card-body-text"><strong>Organization:</strong> Teachnook</p><br>
-          
-          <p id="card-body-text" ><strong>Duration:</strong> 120 hours</p><br>
-          <p id="card-body-text"><strong>Certificate Date: </strong> 03-08-2023</p><br>
-          <p id="card-body-text"><strong>Certificate ID</strong> TNINTC22-2538</p><br>
-          <p id="card-body-text"><strong>Issued By:</strong> Immensphere</p>
-          <button id="learn-more-btn">View Certificate</button>
-        </div>
-      </div>
-
-      <!-- Fifth  -->
-      <div id="card">
-        <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
-        <div id="card-body">
-          <h5 id="card-body-heading">Java</h5><br>
-        
-     
-          <p id="card-body-text"><strong>Organization:</strong> CareerNinja</p><br>
-          
-         
-          <p id="card-body-text" ><strong>Certificate Date: </strong> 29-08-2023</p><br>
-          <p id="card-body-text"><strong>Certificate ID</strong> JAVA20236765X</p><br>
-          <p id="card-body-text"><strong>Issued By:</strong> LearnTube</p>
-          <button id="learn-more-btn">View Certificate</button>
-        </div>
-      </div>
-      <!-- Sixth -->
-      <div id="card">
-        <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
-        <div id="card-body">
-          <h5 id="card-body-heading">Python</h5><br>
-        
-        
-          <p id="card-body-text"><strong>Organization:</strong> Besant Technologies</p><br>
-          
+<!-- Achievements Section -->
+<section id="achievements">
+  <h2 id="experience-heading">ACHIEVEMENTS</h2>
+  <div id="card-container">
+    <!-- First Card -->
+    <div id="card">
+      <img id="card-img" src="https://via.placeholder.com/300x200" alt="Card Image 1">
+      <div id="card-body">
+        <h5 id="card-body-heading">Cloud Computing
+        </h5>
+        <p id="card-body-text"><strong>Course:</strong>  Cloud Computing </p><br>
+        <p id="card-body-text"><strong>Score:</strong> 66% </p><br>
+        <p id="card-body-text"><strong>Issued By:</strong>  NPTEL, IIT Kharagpur</p><br>
        
-          <p id="card-body-text"><strong>Certificate Date: </strong> 20-11-2024</p><br>
-          <p id="card-body-text"><strong>Certificate ID</strong> BTFT 36306</p><br>
-          <p id="card-body-text"><strong>Issued By:</strong> Besant Technologies</p>
-          <button id="learn-more-btn">View Certificate</button>
-        </div>
+        <p id="card-body-text"><strong>Total Certified:</strong> 23,872 Candidates</p><br>
+
+        <p id="card-body-text"><strong>Roll No:</strong> NPTEL24CS17S363700436</p>
+        <button id="learn-more-btn">View Certificate</button>
       </div>
     </div>
-  </section>
+
+    <!-- Second Card -->
+    <div id="card">
+      <img id="card-img" src="https://via.placeholder.com/300x200" alt="Card Image 1">
+      <div id="card-body">
+        <h5 id="card-body-heading">Industry 4.0 and Industrial Internet of Things
+        </h5>
+        <p id="card-body-text"><strong>Course:</strong>   Introduction to Industry 4.0 and Industrial Internet of Things </p><br>
+        <p id="card-body-text"><strong>Score:</strong>  79% </p><br>
+        <p id="card-body-text"><strong>Issued By:</strong>  NPTEL, IIT Kharagpur</p><br>
+       
+        <p id="card-body-text"><strong>Total Certified:</strong> 10,498 Candidates</p><br>
+
+        <p id="card-body-text"><strong>Roll No:</strong> NPTEL24CS345563700450</p>
+        <button id="learn-more-btn">View Certificate</button>
+      </div>
+    </div>
+    <!-- Third  -->
+    <div id="card">
+      <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
+      <div id="card-body">
+        <h5 id="card-body-heading">Data Analysis</h5>
+
+        <p id="card-body-text"><strong>Internship:</strong> Data Analysis</p><br>
+        <p id="card-body-text"><strong>Organization:</strong> Codegnan IT Solutions Pvt Ltd</p><br>
+        
+        <p id="card-body-text"><strong>Duration:</strong> 240 hours</p><br>
+        <p id="card-body-text"><strong>Certificate Date:</strong> 15-04-2024</p><br>
+        <p id="card-body-text"><strong>Certificate ID:</strong> 204N1A3515</p><br>
+        <p id="card-body-text"><strong>Issued By:</strong> APSCHE</p>
+        <button id="learn-more-btn">View Certificate</button>
+      </div>
+    </div>
  
+    <!-- Fourth Card -->
+    <div id="card">
+      <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
+      <div id="card-body">
+        <h5 id="card-body-heading" >Web Development</h5>
+      
+        <p id="card-body-text"><strong>Internship:</strong> Web Development</p><br>
+        <p id="card-body-text"><strong>Organization:</strong> Teachnook</p><br>
+        
+        <p id="card-body-text" ><strong>Duration:</strong> 120 hours</p><br>
+        <p id="card-body-text"><strong>Certificate Date: </strong> 03-08-2023</p><br>
+        <p id="card-body-text"><strong>Certificate ID</strong> TNINTC22-2538</p><br>
+        <p id="card-body-text"><strong>Issued By:</strong> Immensphere</p>
+        <button id="learn-more-btn">View Certificate</button>
+      </div>
+    </div>
+
+    <!-- Fifth  -->
+    <div id="card">
+      <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
+      <div id="card-body">
+        <h5 id="card-body-heading">Java</h5><br>
+      
+   
+        <p id="card-body-text"><strong>Organization:</strong> CareerNinja</p><br>
+        
+       
+        <p id="card-body-text" ><strong>Certificate Date: </strong> 29-08-2023</p><br>
+        <p id="card-body-text"><strong>Certificate ID</strong> JAVA20236765X</p><br>
+        <p id="card-body-text"><strong>Issued By:</strong> LearnTube</p>
+        <button id="learn-more-btn">View Certificate</button>
+      </div>
+    </div>
+    <!-- Sixth -->
+    <div id="card">
+      <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
+      <div id="card-body">
+        <h5 id="card-body-heading">Python</h5><br>
+      
+      
+        <p id="card-body-text"><strong>Organization:</strong> Besant Technologies</p><br>
+        
+     
+        <p id="card-body-text"><strong>Certificate Date: </strong> 20-11-2024</p><br>
+        <p id="card-body-text"><strong>Certificate ID</strong> BTFT 36306</p><br>
+        <p id="card-body-text"><strong>Issued By:</strong> Besant Technologies</p>
+        <button id="learn-more-btn">View Certificate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+<!-- Contact -->
+
 <!-- Contact -->
   <!-- Contact Section -->
   <div id="contact" class="contact-section">
@@ -1171,10 +1194,6 @@
         </div>
     </div>
 </div>
-
-
-    <!-- Add your content here -->
-  </div>
     <script>
       // Navbar
       document.addEventListener("DOMContentLoaded", function () {
@@ -1189,8 +1208,35 @@
           navbarCollapse.style.opacity = "0";
         });
       });
+      // About
 
-       // Handle form submission
+       // JavaScript to generate random color for box-shadow on hover
+       const imageElement = document.querySelector('.about-image img');
+
+// Function to generate a random color
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// Add hover effect to image
+imageElement.addEventListener('mouseover', function () {
+  // Apply random box-shadow with one random color on hover
+  const randomColor = getRandomColor();
+
+  imageElement.style.boxShadow = `0 0 15px 10px ${randomColor}`;
+});
+
+// Remove box-shadow when mouse leaves the image
+imageElement.addEventListener('mouseleave', function () {
+  imageElement.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)'; // Default box-shadow
+});
+// Contact 
+         // Handle form submission
        document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault();  // Prevent form from submitting
 

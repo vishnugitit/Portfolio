@@ -1,0 +1,95 @@
+     /* Contact Section Styling */
+     
+     .contact-section {
+        padding: 60px 0;
+        background-color: #f8f9fa;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #007bff;
+    }
+
+    .contact-section .form-control {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .contact-section .btn {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .contact-section .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .confirmation-message {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: green;
+        font-weight: bold;
+    }
+
+    /* Modal Styling */
+    .modal-body ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .modal-body ul li {
+        padding: 10px 0;
+    }
+    .modal-body ul li a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .modal-body ul li a:hover {
+        text-decoration: underline;
+    }
+
+    /* Icons Styling */
+    .contact-icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #007bff;
+    }
+
+    .contact-info {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-info a {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        text-decoration: none;
+    }
+
+    .contact-info a:hover .contact-icon {
+        color: #0056b3;
+    }
+
+    /* Hover effect for input fields and textarea */
+    input:hover, textarea:hover {
+        border: 3px solid black;
+        transition: border-color 0.3s ease; /* Smooth transition */
+    }
+
+    /* Add styling for the quote */
+    .contact-quote {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #007bff;
+        text-align: center;
+    }
+    .contact-connect {
+font-size: 1.5rem;
+font-weight: 300; /* Corrected the font-weight syntax */
+margin-bottom: 20px;
+color: black;
+text-align: center; /* Centering the text */
+}
