@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,711 +12,16 @@
       crossorigin="anonymous"
     > 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./experience.css">
-    <style>
-      /* Navbar Styling */
-      .navbar {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-in-out;
-      }
-
-      .navbar .navbar-brand {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #f8f9fa;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .navbar .navbar-brand:hover {
-        color: #ff9800;
-      }
-
-      .navbar .nav-link {
-        font-size: 1rem;
-        font-weight: 500;
-        color: #dcdcdc;
-        text-align: justify; /* Apply justify alignment */
-        transition: all 0.3s ease-in-out;
-      }
-
-      .navbar .nav-link:hover {
-        color: #ff9800;
-        transform: scale(1.1);
-      }
-
-      .navbar-toggler {
-        border: none;
-        background: transparent;
-        outline: none;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .navbar-toggler:hover {
-        transform: rotate(90deg);
-      }
-
-      .navbar-collapse {
-        transition: all 0.5s ease;
-      }
-
-      .navbar-nav {
-        gap: 15px;
-      }
-
-      @media (max-width: 991px) {
-        .navbar-nav .nav-link {
-          text-align: justify; /* Keep justify for smaller screens */
-          padding: 10px 0;
-          width: 100%;
-        }
-      }
-
-      @media (max-width: 576px) {
-        .navbar-brand {
-          font-size: 1.2rem;
-        }
-      }
-       /* Header Styling */
-        #home {
-        background-color: #1e1e2f; /* Dark background */
-        color: #f8f9fa; /* Light text */
-        padding: 0; /* Remove padding to cover full height */
-        height: 100vh; /* Full viewport height */
-        display: flex;
-        justify-content: center; /* Center content horizontally */
-        align-items: center; /* Center content vertically */
-      }
-
-      #home .text-section {
-        animation: slideInLeft 1.2s ease-in-out;
-      }
-
-      #home h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        color: #ff9800;
-        transition: color 0.3s ease-in-out;
-      }
-
-      #home h1:hover {
-        color: #ff5722;
-      }
-
-      #home h2, #home h4 {
-        margin: 1rem 0;
-        font-weight: 500;
-        color: #dcdcdc;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      #home h2:hover, #home h4:hover {
-        transform: scale(1.05);
-      }
-
-      #home p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        text-align: justify;
-        margin-top: 1rem;
-        animation: fadeIn 1.5s ease-in-out;
-      }
-
-      #home img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
-      }
-
-      #home img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-      }
-
-      /* Animations */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes slideInLeft {
-        from {
-          transform: translateX(-50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-
-      /* Media Queries */
-      /* Large Screen */
-      @media (min-width: 992px) {
-        #home .content {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-
-        #home .text-section {
-          width: 60%;
-        }
-
-        #home .image-section {
-          width: 35%;
-        }
-
-        #home p {
-          text-align: justify; /* Ensure text is justified */
-        }
-      }
-
-      /* Medium Screen */
-      @media (max-width: 991px) {
-        #home h1 {
-          font-size: 2.5rem;
-        }
-
-        #home p {
-          font-size: 1rem;
-        }
-
-        #home .content {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        #home .text-section {
-          width: 80%; /* Adjust text width */
-        }
-
-        #home .image-section {
-          margin-top: 1rem;
-        }
-
-        #home p {
-          text-align: justify; /* Ensure text is justified */
-        }
-      }
-
-      /* Small Screen */
-      @media (max-width: 576px) {
-        #home h1 {
-          font-size: 2rem;
-        }
-
-        #home p {
-          font-size: 0.9rem;
-        }
-
-        #home img {
-          max-width: 300px;
-        }
-
-        #home .content {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        #home .text-section {
-          width: 90%; /* Adjust text width for small screens */
-        }
-
-        #home p {
-          text-align: justify; /* Ensure text is justified */
-        }
-      }
-
-      /* About Section */
-          /* About Section */
-          header {
-        padding: 4rem 1rem; /* Adjust padding for header */
-        background-color: #ffffff;
-        color: #333;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Full height for header */
-      }
-
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100%; /* Ensure container takes full height */
-        max-width: 1200px; /* Max width for large screens */
-        width: 100%; /* Full width */
-      }
-
-      .section-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #ff9800;
-        text-align: center;
-        margin-bottom: 1.5rem;
-      }
-
-      .section-title::after {
-        content: "";
-        display: block;
-        width: 60px;
-        height: 4px;
-        background: #ff9800;
-        margin: 0.5rem auto;
-        border-radius: 3px;
-      }
-
-      /* About Content */
-      .about-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-        animation: fadeIn 1s ease-in-out;
-        width: 100%;
-        flex-wrap: wrap; /* Allow the flex items to wrap on smaller screens */
-      }
-
-      .about-text {
-        flex: 1;
-        font-size: 1.2rem;
-        line-height: 1.6;
-        text-align: justify;
-        color: #333;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .about-text:hover {
-        transform: translateX(10px);
-        color: #ff9800;
-        cursor: pointer;
-      }
-
-      .about-image {
-        flex-shrink: 0;
-        width: 100%;
-        max-width: 400px; /* Adjust max width for large screens */
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      }
-
-      /* FadeIn Animation */
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Responsive Design */
-      @media (max-width: 992px) {
-        .about-content {
-          flex-direction: column-reverse; /* Switch to column layout with image below text */
-          align-items: center;
-        }
-
-        .about-image {
-          width: 100%;
-          max-width: 80%; /* Make image smaller on medium screens */
-          margin-bottom: 1rem;
-        }
-
-        .about-text {
-          text-align: justify;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .section-title {
-          font-size: 2rem;
-        }
-
-        .about-image {
-          max-width: 90%; /* Adjust image size for smaller screens */
-        }
-
-        .about-text {
-          font-size: 1rem;
-        }
-      }
-
-      @media (max-width: 576px) {
-        .about-text {
-          font-size: 0.9rem;
-        }
-
-        .about-image {
-          max-width: 100%; /* Ensure image fills the screen width on small screens */
-        }
-      }
-       /* Education Section Styling */
-       #education {
-        background-color: #1e1e2f;
-        color: #f8f9fa;
-        padding: 3rem 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        position: relative;
-      }
-
-      .section-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #ff9800;
-        text-align: center;
-        margin-bottom: 2rem;
-        position: relative;
-      }
-
-      .section-title::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        background: #ff9800;
-        margin: 0.5rem auto;
-        border-radius: 3px;
-      }
-
-      /* Timeline Styling */
-      .timeline {
-        position: relative;
-        padding: 2rem 0;
-      }
-
-      .timeline-item {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        margin-bottom: 2rem;
-        background-color: #2e2e3e;
-        border-radius: 10px;
-        padding: 1.5rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .timeline-item:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-      }
-
-      .timeline-icon {
-        flex-shrink: 0;
-        width: 50px;
-        height: 50px;
-        background-color: #ff9800;
-        color: #fff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        margin-right: 1.5rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      }
-
-      .timeline-content strong {
-        font-size: 1.25rem;
-        color: #ff9800;
-      }
-
-      .timeline-content p {
-        font-size: 1rem;
-        color: #dcdcdc;
-        margin: 0.5rem 0;
-      }
-
-      /* Animations */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .timeline-item {
-        animation: fadeInUp 1s ease-in-out;
-      }
-
-      /* Responsiveness */
-      @media (max-width: 768px) {
-        .timeline-item {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-
-        .timeline-icon {
-          margin-right: 0;
-          margin-bottom: 1rem;
-        }
-      }
-
-      @media (max-width: 576px) {
-        #education {
-          padding: 2rem 1rem;
-        }
-
-        .section-title {
-          font-size: 1.8rem;
-        }
-
-        .timeline-content strong {
-          font-size: 1.1rem;
-        }
-
-        .timeline-content p {
-          font-size: 0.9rem;
-        }
-      }
-        /* Skills Section */
-        #skills {
-        background-color: #1e1e2f;
-        color: #f8f9fa;
-        padding: 3rem 1rem;
-        border-radius: 10px;
-      }
-
-      .section-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #ff9800;
-        text-align: center;
-        margin-bottom: 2rem;
-        position: relative;
-        font-family: 'Poppins', sans-serif;
-      }
-
-      .section-title::after {
-        content: "";
-        display: block;
-        width: 60px;
-        height: 4px;
-        background: #ff9800;
-        margin: 0.5rem auto;
-        border-radius: 3px;
-      }
-
-      /* Skill Cards */
-      .card {
-        border: none;
-        background-color: transparent;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding: 1rem;
-        text-align: center;
-        max-width: 150px;
-        margin: 0 auto;
-        position: relative;
-      }
-
-      .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      .card-img-top {
-        width: 80%;
-        height: auto;
-        border-radius: 5px;
-        margin: 0 auto;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-      }
-
-      .card:hover .card-img-top {
-        opacity: 0.9;
-        transform: scale(1.1);
-      }
-
-      /* Hover Text Above Card */
-      .card-container {
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        margin: 0 auto;
-      }
-
-      .hover-text {
-        position: absolute;
-        top: -30px; /* Place text above the card */
-        left: 50%;
-        transform: translateX(-50%); /* Center the text horizontally */
-        background-color: rgba(0, 0, 0, 0.7); /* Dark background for readability */
-        color: white;
-        padding: 4px 8px;
-        border-radius: 8px;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-        font-size: 0.9rem;
-        font-weight: 400; /* Lightweight font */
-        font-family: 'Poppins', sans-serif;
-        white-space: nowrap;
-        z-index: 2;
-      }
-
-      .card-container:hover .hover-text {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(-50%) translateY(-10px); /* Smooth animation */
-      }
-
-      /* Responsive Adjustments */
-      @media (max-width: 768px) {
-        .section-title {
-          font-size: 2rem;
-        }
-
-        .card-img-top {
-          max-width: 70%;
-        }
-      }
-
-      @media (max-width: 576px) {
-        #skills {
-          padding: 2rem 1rem;
-        }
-
-        .section-title {
-          font-size: 1.8rem;
-        }
-
-        .card-img-top {
-          max-width: 60%;
-        }
-      }
-      
-
-         
-          
-      /* Experience Section */
-    
-      /* Projects Section */
-
-      /* Achievements */
-
-        /* Contact */
-           
-        /* Contact Section Styling */
-        .contact-section {
-            padding: 60px 0;
-            background-color: #f8f9fa;
-        }
-
-        .contact-section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #007bff;
-        }
-
-        .contact-section .form-control {
-            margin-bottom: 20px;
-            padding: 15px;
-        }
-
-        .contact-section .btn {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .contact-section .btn:hover {
-            background-color: #0056b3;
-        }
-
-        .confirmation-message {
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: green;
-            font-weight: bold;
-        }
-
-        /* Modal Styling */
-        .modal-body ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .modal-body ul li {
-            padding: 10px 0;
-        }
-        .modal-body ul li a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .modal-body ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Icons Styling */
-        .contact-icon {
-            font-size: 1.5rem;
-            margin-right: 10px;
-            color: #007bff;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-info a {
-            display: flex;
-            align-items: center;
-            margin-right: 15px;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover .contact-icon {
-            color: #0056b3;
-        }
-
-        /* Hover effect for input fields and textarea */
-        input:hover, textarea:hover {
-            border: 3px solid black;
-            transition: border-color 0.3s ease; /* Smooth transition */
-        }
-
-        /* Add styling for the quote */
-        .contact-quote {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #007bff;
-            text-align: center;
-        }
-        .contact-connect {
-    font-size: 1.5rem;
-    font-weight: 300; /* Corrected the font-weight syntax */
-    margin-bottom: 20px;
-    color: black;
-    text-align: center; /* Centering the text */
-}
-    
-    </style>
+<link rel="stylesheet" href="./experience-projects-achievements.css">
+<link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="./home.css">
+<link rel="stylesheet" href="./about.css">
+<link rel="stylesheet" href="./education.css">
+<link rel="stylesheet" href="./skills.css">
+<link rel="stylesheet" href="./contact.css">
+  
   </head>
-  <body id="body">
+  <body>
     <div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -763,58 +69,82 @@
       </div>
     </nav>
     <!-- Header Section -->
-
     <header id="home" class="container-fluid">
-      <div class="container">
-        <div class="content">
-          <!-- Text Section -->
-          <div class="text-section">
-            <h1>Welcome to My Portfolio</h1>
-            <h2>I am Vishnu Vardhan</h2>
-            <h4>Software Engineer</h4>
-            <p>
-              I specialize in creating scalable, responsive, and user-friendly web applications. 
-              With a passion for problem-solving and a keen eye for design, I aim to deliver 
-              high-quality solutions that exceed expectations. Let's build something amazing together!
-            </p>
-          </div>
-          <!-- Image Section -->
-          <div class="image-section">
-            <img src="./robo2.png" class="img-fluid" alt="Professional Image">
+        <div class="container">
+          <div class="content">
+            <!-- Text Section -->
+            <div class="text-section">
+              <h1>Welcome to My Portfolio</h1>
+              <h2>I AM</h2>
+              <h1>Vishnu Vardhan</h1>
+              <h4>Software Engineer</h4>
+              <p>
+                "Software is a great combination of artistry and engineering."
+              </p>
+            </div>
+            <!-- Image Section -->
+            <div class="image-section">
+              <img src="./dev1.webp" class="img-fluid" alt="Professional Image">
+              <!-- <img src="./dev.png" class="img-fluid" alt="Professional Image"> -->
+            </div>
           </div>
         </div>
-      </div>
-    </header>
-
-
-   
-
-
+      </header>
+  
  <!-- About Section -->
+  <header>
+ <section id="about" class="container-about" >
+  <h2 class="section-title">About Me</h2>
+  <div class="about-content" >
+    <!-- Text Content -->
+    <div class="about-text">
+      <p>
+        I am a front-end developer.  I am skilled in Search Engine Optimization, Express.js, React.js, and JavaScript. I am passionate about creating interactive and beautiful user interfaces, along with the required functionalities on the front end.One of my favourite technologies to work with is React.js, particularly within the MERN  stack.
+      </p>
+    </div>
 
- <header>
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-content">
-      <!-- Text Content -->
-      <div class="about-text">
-        <p>
-          Hi, I'm a passionate web developer with experience in building
-          scalable, high-performance web applications. I specialize in
-          frontend development, using technologies like HTML, CSS, JavaScript,
-          and React. I strive to create engaging user experiences with clean
-          and responsive designs. My goal is to continuously learn and improve
-          my skills, making a meaningful impact with my work.
-        </p>
+    <!-- Image -->
+    <div class="about-image">
+      <img src="./vishnu.jpeg" alt="About Me" class="img-fluid" />
+    </div>
+  </div>
+</section>
+</header>
+ <!-- Education Section -->
+ <section id="education" class="container mt-5">
+  <h2 class="section-title">Education</h2>
+  <div class="timeline">
+    <!-- Bachelor's Degree -->
+    <div class="timeline-item">
+      <div class="timeline-icon">🎓</div>
+      <div class="timeline-content">
+        <strong>Bachelor's Degree in Computer Science & Engineering</strong>
+        <p>Visvodaya Engineering College (2020 - 2024)</p>
+        <p>CGPA: 7.5</p>
       </div>
+    </div>
 
-      <!-- Image -->
-      <div class="about-image">
-        <img src="./css.png" alt="About Me" class="img-fluid" />
+    <!-- High School -->
+    <div class="timeline-item">
+      <div class="timeline-icon">🏫</div>
+      <div class="timeline-content">
+        <strong>High School, Board of Intermediate Education</strong>
+        <p>Completed in 2020</p>
+        <p>CGPA: 8.3</p>
+      </div>
+    </div>
+
+    <!-- Secondary School -->
+    <div class="timeline-item">
+      <div class="timeline-icon">📘</div>
+      <div class="timeline-content">
+        <strong>Secondary School, Board of Secondary Education</strong>
+        <p>Completed in 2018</p>
+        <p>CGPA: 8.8</p>
       </div>
     </div>
   </div>
-</header>
+</section>
   <!-- Skills Section -->
   <section id="skills" class="container mt-5">
     <h2 class="section-title">Skills</h2>
@@ -922,7 +252,7 @@
             <!-- <li id="card-body-text">Collaborated with team members to provide data-driven insights for business decisions.</li> -->
           </ul>
           <p id="card-body-text"><strong>Skills:</strong> Data Analysis, Python, Data Visualization</p>
-          <button id="learn-more-btn">Learn More</button>
+          <a href=" https://drive.google.com/file/d/15130IZjLACv3XImJf_4yuIK7G4UA46kC/view?usp=sharing"><button id="learn-more-btn">View Details</button></a>
         </div>
       </div>
 
@@ -941,7 +271,7 @@
             <!-- <li id="card-body-text">Implemented back-end services using Node.js and worked with SQL databases.</li> -->
           </ul>
           <p id="card-body-text"><strong>Skills:</strong>Web Development, JavaScript, Node.js, React, SQL, Responsive Design</p>
-          <button id="learn-more-btn">Learn More</button>
+          <a href="https://drive.google.com/file/d/171wa0FEOfCbNrqSuWSSx-jPQBQidxgJo/view?usp=sharing"><button id="learn-more-btn">View Details</button></a>
         </div>
       </div>
       <div id="card">
@@ -958,7 +288,7 @@
             <!-- <li id="card-body-text">Developed and tested a temperature and humidity monitoring system using IoT sensors.</li> -->
           </ul>
           <p id="card-body-text"><strong>Skills:</strong>  IoT, Raspberry Pi, Arduino, Sensor Technologies, IoT Communication Protocols</p>
-          <button id="learn-more-btn">Learn More</button>
+         <a href="https://drive.google.com/file/d/1RbQ_LaZ7OLToQyer2MbVYrKjskFsm59X/view?usp=sharing"> <button id="learn-more-btn">View Details</button></a>
         </div>
       </div>
     </div>
@@ -975,37 +305,37 @@
       <div id="card-container">
         <!-- First Card -->
         <div id="card">
-          <img id="card-img" src="https://via.placeholder.com/300x200" alt="Card Image 1">
+          <img id="card-img" src="./bio-metric.png" alt="Card Image 1">
           <div id="card-body">
             <h5 id="card-body-heading">AADHAR Based Bio-Metric Voting Machine</h5><br>
             <p id="card-body-text"><strong>Aim:</strong> Secure e-voting using Aadhaar-based biometric authentication.</p><br>
             <p id="card-body-text"><strong>How It Works:</strong> Fingerprint and finger vein scanning linked to Aadhaar for voter authentication, with photo display for verification.</p><br>
             <p id="card-body-text"><strong>Skills Used:</strong>   Python, Arduino IDE, SQL. </p>
-            <button id="learn-more-btn">Learn More</button>
+            <a href="https://docs.google.com/presentation/d/1goWfxA7oY3xZmeHTsGJiHM3razsa0rip/edit?usp=sharing&ouid=118286651753752337517&rtpof=true&sd=true"><button id="learn-more-btn">Live Preview</button></a>
           </div>
         </div>
   
         <!-- Second Card -->
         <div id="card">
-          <img id="card-img" src="https://via.placeholder.com/300x200" alt="Card Image 1">
+          <img id="card-img" src="./website.png" alt="Card Image 1">
           <div id="card-body">
             <h5 id="card-body-heading">Neaty Food Website</h5><br>
             <p id="card-body-text"><strong>Aim:</strong> Provide a visually appealing and user-friendly platform for browsing and ordering food online.</p><br>
             <p id="card-body-text"><strong>How It Works:</strong> Users can explore various food categories, view menu items, and place orders easily. The website is fully responsive for smooth browsing across all devices.</p><br>
             <p id="card-body-text"><strong>Skills Used:</strong>  HTML, CSS, </p>
-            <button id="learn-more-btn">Learn More</button>
+            <a href="https://vishnugitit.github.io/Project/"><button id="learn-more-btn">Live Preview</button></a>
           </div>
         </div>
   
         <!-- Third  -->
         <div id="card">
-          <img id="card-img" src="https://via.placeholder.com/300x200" alt="Card Image 1">
+          <img id="card-img" src="./fashion.jpg" alt="Card Image 1">
           <div id="card-body">
             <h5 id="card-body-heading">H&M Fashion App</h5><br>
             <p id="card-body-text"><strong>Aim:</strong> Provide a visually appealing and user-friendly platform for browsing fashion products and personalized recommendations.</p><br>
             <p id="card-body-text"><strong>How It Works:</strong> Users can explore fashion categories, view product details, and save favorites. Features like filtering and styling tips enhance the experience on all devices.</p><br>
             <p id="card-body-text"><strong>Skills Used:</strong>   HTML, CSS, JavaScript, Bootstrap</p>
-            <button id="learn-more-btn">Learn More</button>
+            <a href="https://vishnugitit.github.io/H-M_Fashion_Website/"><button id="learn-more-btn">Live Previewe</button></a>
           </div>
         </div>
   
@@ -1021,115 +351,111 @@
      
   <!-- Achievements Section -->
 
-<!-- Achievements Section -->
-<section id="achievements">
-  <h2 id="experience-heading">ACHIEVEMENTS</h2>
-  <div id="card-container">
-    <!-- First Card -->
-    <div id="card">
-      <img id="card-img" src="https://via.placeholder.com/300x200" alt="Card Image 1">
-      <div id="card-body">
-        <h5 id="card-body-heading">Cloud Computing
-        </h5>
-        <p id="card-body-text"><strong>Course:</strong>  Cloud Computing </p><br>
-        <p id="card-body-text"><strong>Score:</strong> 66% </p><br>
-        <p id="card-body-text"><strong>Issued By:</strong>  NPTEL, IIT Kharagpur</p><br>
-       
-        <p id="card-body-text"><strong>Total Certified:</strong> 23,872 Candidates</p><br>
-
-        <p id="card-body-text"><strong>Roll No:</strong> NPTEL24CS17S363700436</p>
-        <button id="learn-more-btn">View Certificate</button>
-      </div>
-    </div>
-
-    <!-- Second Card -->
-    <div id="card">
-      <img id="card-img" src="https://via.placeholder.com/300x200" alt="Card Image 1">
-      <div id="card-body">
-        <h5 id="card-body-heading">Industry 4.0 and Industrial Internet of Things
-        </h5>
-        <p id="card-body-text"><strong>Course:</strong>   Introduction to Industry 4.0 and Industrial Internet of Things </p><br>
-        <p id="card-body-text"><strong>Score:</strong>  79% </p><br>
-        <p id="card-body-text"><strong>Issued By:</strong>  NPTEL, IIT Kharagpur</p><br>
-       
-        <p id="card-body-text"><strong>Total Certified:</strong> 10,498 Candidates</p><br>
-
-        <p id="card-body-text"><strong>Roll No:</strong> NPTEL24CS345563700450</p>
-        <button id="learn-more-btn">View Certificate</button>
-      </div>
-    </div>
-    <!-- Third  -->
-    <div id="card">
-      <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
-      <div id="card-body">
-        <h5 id="card-body-heading">Data Analysis</h5>
-
-        <p id="card-body-text"><strong>Internship:</strong> Data Analysis</p><br>
-        <p id="card-body-text"><strong>Organization:</strong> Codegnan IT Solutions Pvt Ltd</p><br>
-        
-        <p id="card-body-text"><strong>Duration:</strong> 240 hours</p><br>
-        <p id="card-body-text"><strong>Certificate Date:</strong> 15-04-2024</p><br>
-        <p id="card-body-text"><strong>Certificate ID:</strong> 204N1A3515</p><br>
-        <p id="card-body-text"><strong>Issued By:</strong> APSCHE</p>
-        <button id="learn-more-btn">View Certificate</button>
-      </div>
-    </div>
+  <section id="achievements">
+    <h2 id="experience-heading">ACHIEVEMENTS</h2>
+    <div id="card-container">
+      <!-- First Card -->
+      <div id="card">
+        <img id="card-img" src="./cloud.jpg" alt="Card Image 1">
+        <div id="card-body">
+          <h5 id="card-body-heading">Cloud Computing
+          </h5>
+          <p id="card-body-text"><strong>Course:</strong>  Cloud Computing </p><br>
+          <p id="card-body-text"><strong>Score:</strong> 66% </p><br>
+          <p id="card-body-text"><strong>Issued By:</strong>  NPTEL, IIT Kharagpur</p><br>
+         
+          <p id="card-body-text"><strong>Total Certified:</strong> 23,872 Candidates</p><br>
  
-    <!-- Fourth Card -->
-    <div id="card">
-      <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
-      <div id="card-body">
-        <h5 id="card-body-heading" >Web Development</h5>
-      
-        <p id="card-body-text"><strong>Internship:</strong> Web Development</p><br>
-        <p id="card-body-text"><strong>Organization:</strong> Teachnook</p><br>
-        
-        <p id="card-body-text" ><strong>Duration:</strong> 120 hours</p><br>
-        <p id="card-body-text"><strong>Certificate Date: </strong> 03-08-2023</p><br>
-        <p id="card-body-text"><strong>Certificate ID</strong> TNINTC22-2538</p><br>
-        <p id="card-body-text"><strong>Issued By:</strong> Immensphere</p>
-        <button id="learn-more-btn">View Certificate</button>
+          <p id="card-body-text"><strong>Roll No:</strong> NPTEL24CS17S363700436</p>
+         <a href="https://drive.google.com/file/d/1-9no2HrCD7ISA1U4VI6Py7ll-wSgF4Ad/view?usp=sharing"> <button id="learn-more-btn">View Certificate</button></a>
+        </div>
       </div>
-    </div>
 
-    <!-- Fifth  -->
-    <div id="card">
-      <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
-      <div id="card-body">
-        <h5 id="card-body-heading">Java</h5><br>
-      
-   
-        <p id="card-body-text"><strong>Organization:</strong> CareerNinja</p><br>
-        
-       
-        <p id="card-body-text" ><strong>Certificate Date: </strong> 29-08-2023</p><br>
-        <p id="card-body-text"><strong>Certificate ID</strong> JAVA20236765X</p><br>
-        <p id="card-body-text"><strong>Issued By:</strong> LearnTube</p>
-        <button id="learn-more-btn">View Certificate</button>
+      <!-- Second Card -->
+      <div id="card">
+        <img id="card-img" src="./industry.jpg" alt="Card Image 1">
+        <div id="card-body">
+          <h5 id="card-body-heading">Industry 4.0 and Industrial Internet of Things
+          </h5>
+          <p id="card-body-text"><strong>Course:</strong>   Introduction to Industry 4.0 and Industrial Internet of Things </p><br>
+          <p id="card-body-text"><strong>Score:</strong>  79% </p><br>
+          <p id="card-body-text"><strong>Issued By:</strong>  NPTEL, IIT Kharagpur</p><br>
+         
+          <p id="card-body-text"><strong>Total Certified:</strong> 10,498 Candidates</p><br>
+ 
+          <p id="card-body-text"><strong>Roll No:</strong> NPTEL24CS345563700450</p>
+          <a href="https://drive.google.com/file/d/1WfSoB0UsQYsJ3fbPO1Qx9k-XeTk5Payf/view?usp=sharing"><button id="learn-more-btn">View Certificate</button></a>
+        </div>
       </div>
-    </div>
-    <!-- Sixth -->
-    <div id="card">
-      <img id="card-img" src="./bootstrap.png" alt="Card Image 3">
-      <div id="card-body">
-        <h5 id="card-body-heading">Python</h5><br>
-      
-      
-        <p id="card-body-text"><strong>Organization:</strong> Besant Technologies</p><br>
+      <!-- Third  -->
+      <div id="card">
+        <img id="card-img" src="./data.png" alt="Card Image 3">
+        <div id="card-body">
+          <h5 id="card-body-heading">Data Analysis</h5>
+
+          <p id="card-body-text"><strong>Internship:</strong> Data Analysis</p><br>
+          <p id="card-body-text"><strong>Organization:</strong> Codegnan IT Solutions Pvt Ltd</p><br>
+          
+          <p id="card-body-text"><strong>Duration:</strong> 240 hours</p><br>
+          <p id="card-body-text"><strong>Certificate Date:</strong> 15-04-2024</p><br>
+          <p id="card-body-text"><strong>Certificate ID:</strong> 204N1A3515</p><br>
+          <p id="card-body-text"><strong>Issued By:</strong> APSCHE</p>
+          <a href="https://drive.google.com/file/d/15130IZjLACv3XImJf_4yuIK7G4UA46kC/view?usp=sharing"><button id="learn-more-btn">View Certificate</button></a>
+        </div>
+      </div>
+   
+      <!-- Fourth Card -->
+      <div id="card">
+        <img id="card-img" src="./webdev2.webp" alt="Card Image 3">
+        <div id="card-body">
+          <h5 id="card-body-heading" >Web Development</h5>
+        
+          <p id="card-body-text"><strong>Internship:</strong> Web Development</p><br>
+          <p id="card-body-text"><strong>Organization:</strong> Teachnook</p><br>
+          
+          <p id="card-body-text" ><strong>Duration:</strong> 120 hours</p><br>
+          <p id="card-body-text"><strong>Certificate Date: </strong> 03-08-2023</p><br>
+          <p id="card-body-text"><strong>Certificate ID</strong> TNINTC22-2538</p><br>
+          <p id="card-body-text"><strong>Issued By:</strong> Immensphere</p>
+          <a href="https://drive.google.com/file/d/171wa0FEOfCbNrqSuWSSx-jPQBQidxgJo/view?usp=sharing"><button id="learn-more-btn">View Certificate</button></a>
+        </div>
+      </div>
+
+      <!-- Fifth  -->
+      <div id="card">
+        <img id="card-img" src="./java.png" alt="Card Image 3">
+        <div id="card-body">
+          <h5 id="card-body-heading">Java</h5><br>
         
      
-        <p id="card-body-text"><strong>Certificate Date: </strong> 20-11-2024</p><br>
-        <p id="card-body-text"><strong>Certificate ID</strong> BTFT 36306</p><br>
-        <p id="card-body-text"><strong>Issued By:</strong> Besant Technologies</p>
-        <button id="learn-more-btn">View Certificate</button>
+          <p id="card-body-text"><strong>Organization:</strong> CareerNinja</p><br>
+          
+         
+          <p id="card-body-text" ><strong>Certificate Date: </strong> 29-08-2023</p><br>
+          <p id="card-body-text"><strong>Certificate ID</strong> JAVA20236765X</p><br>
+          <p id="card-body-text"><strong>Issued By:</strong> LearnTube</p>
+          <a href="https://drive.google.com/file/d/1bp__JM729PBhjXQIB7_d6UUZSRFGtAyk/view?usp=sharing"><button id="learn-more-btn">View Certificate</button></a>
+        </div>
+      </div>
+      <!-- Sixth -->
+      <div id="card">
+        <img id="card-img" src="./python.png" alt="Card Image 3">
+        <div id="card-body">
+          <h5 id="card-body-heading">Python</h5><br>
+        
+        
+          <p id="card-body-text"><strong>Organization:</strong> Besant Technologies</p><br>
+          
+       
+          <p id="card-body-text"><strong>Certificate Date: </strong> 20-11-2024</p><br>
+          <p id="card-body-text"><strong>Certificate ID</strong> BTFT 36306</p><br>
+          <p id="card-body-text"><strong>Issued By:</strong> Besant Technologies</p>
+          <a href="https://drive.google.com/file/d/1ddnXqHBnyXgyyRILp67FabJ1CINJM_FY/view?usp=sharing"><button id="learn-more-btn">View Certificate</button></a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
  
-<!-- Contact -->
-
 <!-- Contact -->
   <!-- Contact Section -->
   <div id="contact" class="contact-section">
@@ -1194,6 +520,10 @@
         </div>
     </div>
 </div>
+
+
+    <!-- Add your content here -->
+  </div>
     <script>
       // Navbar
       document.addEventListener("DOMContentLoaded", function () {
@@ -1208,10 +538,10 @@
           navbarCollapse.style.opacity = "0";
         });
       });
-      // About
 
-       // JavaScript to generate random color for box-shadow on hover
-       const imageElement = document.querySelector('.about-image img');
+    //   Contact
+         // JavaScript to generate random color for box-shadow on hover
+         const imageElement = document.querySelector('.about-image img');
 
 // Function to generate a random color
 function getRandomColor() {
@@ -1235,8 +565,7 @@ imageElement.addEventListener('mouseover', function () {
 imageElement.addEventListener('mouseleave', function () {
   imageElement.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)'; // Default box-shadow
 });
-// Contact 
-         // Handle form submission
+       // Handle form submission
        document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault();  // Prevent form from submitting
 
