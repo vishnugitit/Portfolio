@@ -180,7 +180,7 @@
   
     #home p {
       font-size: 0.9rem;
-      text-align: justify; /* Justifies paragraph text */
+      text-align: center; /* Justifies paragraph text */
       margin: 0.5rem 0;
     }
   
