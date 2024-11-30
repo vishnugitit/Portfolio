@@ -127,7 +127,105 @@ header{
     }
   }
 
+/* Resume Section */
+.resume-section {
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+}
 
+.resume-container {
+  margin: 1.5rem 0;
+}
+
+.resume-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.resume-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff9800;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #e68a00;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.view-resume {
+  background-color: #4caf50;
+}
+
+.view-resume:hover {
+  background-color: #45a049;
+}
+
+.download-resume {
+  background-color: #2196f3;
+}
+
+.download-resume:hover {
+  background-color: #1e88e5;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-image {
+      max-width: 80%;
+  }
+
+  .about-text {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 2rem;
+  }
+
+  .about-image {
+      max-width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-text {
+      font-size: 0.9rem;
+  }
+
+  .about-image {
+      max-width: 100%;
+  }
+
+  .btn {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.5rem;
+  }
+}
 
 
 
