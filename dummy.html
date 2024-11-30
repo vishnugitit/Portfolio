@@ -3,145 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theme Toggle with Animation</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
     <style>
-        /* Default Styles (Light Mode) */
-body {
-    font-family: Arial, sans-serif;
-    transition: background-color 0.5s ease, color 0.5s ease, all 0.5s ease; /* Smooth transition for color changes */
-}
+        /* Small Screen */
+@media (max-width: 576px) {
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
 
-body.light-mode {
-    background-color: white;
-    color: black;
-}
+  #home h1, #home h2, #home h4, #home p {
+    margin: 0.5rem 0;
+  }
 
-body.light-mode h1 {
-    color: blue; /* Headings color in light mode */
-}
-body.light-mode h2 {
-    color: green;
-}
+  #home .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 
-body.light-mode a {
-    color: green; /* Links color in light mode */
-    transition: color 0.3s ease; /* Smooth transition for link color on hover */
-}
+  #home .text-section {
+    width: 100%;
+    padding: 0 1rem;
+  }
 
-body.light-mode a:hover {
-    color: darkgreen; /* Darker green when hovering over links */
-}
+  #home img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 1rem;
+  }
+} 
 
-body.light-mode button {
-    background-color: red; /* Button color in light mode */
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for button color and size */
-}
+/* Small Screen */
 
-body.light-mode button:hover {
-    background-color: darkred; /* Dark red on button hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-}
 
-body.light-mode .theme-toggle {
-    margin: 20px;
-    color: blue; /* Visual color for light mode theme indicator */
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: black;
-    color: white;
-}
-
-body.dark-mode h1 {
-    color: orange; /* Headings color in dark mode */
-}
-
-body.dark-mode h2{
-    color: rgb(203, 36, 162);
-}
-body.dark-mode a {
-    color: pink; /* Links color in dark mode */
-    transition: color 0.3s ease; /* Smooth transition for link color on hover */
-}
-
-body.dark-mode a:hover {
-    color: deeppink; /* Darker pink when hovering over links */
-}
-
-body.dark-mode button {
-    background-color: green;/* Button color in dark mode */
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for button color and size */
-}
-
-body.dark-mode button:hover {
-    background-color: darkred; /* Dark red on button hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-}
-
-body.dark-mode .theme-toggle {
-    margin: 20px;
-    color: orange; /* Visual color for dark mode theme indicator */
-}
-
-/* Smooth fade-out effect for page transitions */
-body {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
     </style>
 </head>
-<body class="light-mode">
-    <div class="theme-toggle">
-        <label>
-            <input type="radio" name="theme" value="light" checked> Light Mode
-        </label>
-        <label>
-            <input type="radio" name="theme" value="dark"> Dark Mode
-        </label>
-    </div>
-
-    <div class="content">
-        <h1>Welcome to My Website</h1>
-        <h2>HEllo</h2>
-        <p>This is an example of switching between light and dark mode with smooth transitions and hover effects.</p>
-        <a href="#">Click here to learn more</a>
-        <button>Click Me</button>
-    </div>
-
-    <script>
-        const radioButtons = document.querySelectorAll('input[name="theme"]');
-        radioButtons.forEach(button => {
-            button.addEventListener('change', (event) => {
-                if (event.target.value === 'light') {
-                    document.body.className = 'light-mode';
-                } else {
-                    document.body.className = 'dark-mode';
-                }
-            });
-        });
-    </script>
+<body>
+    
+    <header id="home" class="container-fluid">
+        <div class="container">
+          <div class="content">
+            <!-- Text Section -->
+            <div class="text-section">
+              <h1>Welcome to My Portfolio</h1>
+              <h2>I AM</h2>
+              <h1>Vishnu Vardhan</h1>
+              <h4>Software Engineer</h4>
+              <p>
+                "Software is a great combination of artistry and engineering."
+              </p>
+            </div>
+            <!-- Image Section -->
+            <div class="image-section">
+              <img src="./dev1.webp" class="img-fluid" alt="Professional Image">
+              <!-- <img src="./dev.png" class="img-fluid" alt="Professional Image"> -->
+            </div>
+          </div>
+        </div>
+      </header> 
 </body>
 </html>
