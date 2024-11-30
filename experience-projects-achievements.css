@@ -20,8 +20,8 @@
       }
   
       #card {
-        background-color: #343a40;
-        color: #fff;
+        /* background-color: #343a40; */
+        /* color: #fff; */
         width: 100%;
         max-width: 420px; /* Slightly increased card width */
         margin-bottom: 20px;
@@ -64,7 +64,7 @@
   
       /* Button styling */
       #learn-more-btn {
-        background-color: #007bff;
+        /* background-color: #007bff; */
         color: #fff;
         padding: 10px 20px; /* Increased padding */
         text-decoration: none;

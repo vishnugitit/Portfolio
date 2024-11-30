@@ -1,7 +1,7 @@
 /*  Skills Styling */
 
 #skills {
-    background-color: #1e1e2f;
+    /* background-color: #1e1e2f; */
     color: #f8f9fa;
     padding: 3rem 1rem;
     border-radius: 10px;
@@ -74,8 +74,8 @@
     top: -30px; /* Place text above the card */
     left: 50%;
     transform: translateX(-50%); /* Center the text horizontally */
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background for readability */
-    color: white;
+   /* background-color: rgba(0, 0, 0, 0.7);  /* Dark background for readability */
+    /* color: black; */
     padding: 4px 8px;
     border-radius: 8px;
     opacity: 0;

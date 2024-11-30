@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theme Toggle with Animation</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Default Styles (Light Mode) */
-body {
+   /* Default Styles (Light Mode) */
+   body {
     font-family: Arial, sans-serif;
     transition: background-color 0.5s ease, color 0.5s ease, all 0.5s ease; /* Smooth transition for color changes */
 }
@@ -18,11 +10,35 @@ body.light-mode {
 }
 
 body.light-mode h1 {
-    color: blue; /* Headings color in light mode */
+    color:#1A73E8; /* Headings color in light mode */
 }
-body.light-mode h2 {
-    color: green;
+body.light-mode h2{
+    color: #1A73E8;
 }
+body.light-mode h3{
+    color: black;
+}
+body.light-mode h4{
+    color: black;
+}
+body.light-mode h5{
+    color: black;
+}
+body.light-mode h6{
+    color: black;
+}
+body.light-mode p{
+    color: black;
+}
+/* body.light-mode p:hover{
+    color: green; 
+} */
+body.light-mode .hover-text{
+    color: white;
+    background-color:#1A73E8;
+}
+
+
 
 body.light-mode a {
     color: green; /* Links color in light mode */
@@ -30,7 +46,7 @@ body.light-mode a {
 }
 
 body.light-mode a:hover {
-    color: darkgreen; /* Darker green when hovering over links */
+    color: black /* Darker green when hovering over links */
 }
 
 body.light-mode button {
@@ -51,29 +67,48 @@ body.light-mode button:hover {
 
 body.light-mode .theme-toggle {
     margin: 20px;
-    color: blue; /* Visual color for light mode theme indicator */
+    color: white; /* Visual color for light mode theme indicator */
 }
 
 /* Dark Mode Styles */
 body.dark-mode {
-    background-color: black;
+    background-color: #121212;
+   /* background: rgb(33, 31, 31); */
     color: white;
 }
 
 body.dark-mode h1 {
     color: orange; /* Headings color in dark mode */
 }
-
 body.dark-mode h2{
-    color: rgb(203, 36, 162);
+    color: orange;
 }
+body.dark-mode h3{
+    color: white;
+}
+body.dark-mode h4{
+    color: white;
+}
+body.dark-mode h5{
+    color: white;
+}
+body.dark-mode h6{
+    color: white;
+}
+body.dark-mode p{
+    color: white;
+}
+/* body.dark-mode p:hover{
+    color: #eb5d10; 
+} */
+
 body.dark-mode a {
     color: pink; /* Links color in dark mode */
     transition: color 0.3s ease; /* Smooth transition for link color on hover */
 }
 
 body.dark-mode a:hover {
-    color: deeppink; /* Darker pink when hovering over links */
+    color: white /* Darker pink when hovering over links */
 }
 
 body.dark-mode button {
@@ -94,13 +129,49 @@ body.dark-mode button:hover {
 
 body.dark-mode .theme-toggle {
     margin: 20px;
-    color: orange; /* Visual color for dark mode theme indicator */
+    color: white /* Visual color for dark mode theme indicator */
+}
+body.dark-mode .timeline-item:hover{
+    border: 2px solid white;
+    box-shadow: 0 8px 15px rgba(104, 101, 101, 0.5);
+}
+body.dark-mode .hover-text{
+    color: white;
+    background-color: #FF5722;
+}
+
+body.dark-mode .contact-info a:hover .contact-icon {
+    color: green;                     /* 3   */
+}
+
+body.dark-mode .contact-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: green;             /*  2  */
+}
+
+body.dark-mode .modal-body ul li a {
+    color: green;                 /* 1 */
+    text-decoration: none;
+}
+body.dark-mode .modal-body{
+    color: black;
+}
+body.dark-mode .modal-header h5{
+    color: black;
+   
+}
+
+body.dark-mode .modal-body p{
+    color: black;
+   
 }
 
 /* Smooth fade-out effect for page transitions */
 body {
     animation: fadeIn 0.5s ease-in-out;
 }
+
 
 @keyframes fadeIn {
     0% {
@@ -110,38 +181,3 @@ body {
         opacity: 1;
     }
 }
-
-    </style>
-</head>
-<body class="light-mode">
-    <div class="theme-toggle">
-        <label>
-            <input type="radio" name="theme" value="light" checked> Light Mode
-        </label>
-        <label>
-            <input type="radio" name="theme" value="dark"> Dark Mode
-        </label>
-    </div>
-
-    <div class="content">
-        <h1>Welcome to My Website</h1>
-        <h2>HEllo</h2>
-        <p>This is an example of switching between light and dark mode with smooth transitions and hover effects.</p>
-        <a href="#">Click here to learn more</a>
-        <button>Click Me</button>
-    </div>
-
-    <script>
-        const radioButtons = document.querySelectorAll('input[name="theme"]');
-        radioButtons.forEach(button => {
-            button.addEventListener('change', (event) => {
-                if (event.target.value === 'light') {
-                    document.body.className = 'light-mode';
-                } else {
-                    document.body.className = 'dark-mode';
-                }
-            });
-        });
-    </script>
-</body>
-</html>

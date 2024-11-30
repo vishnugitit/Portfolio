@@ -1,8 +1,9 @@
 /* Home Styling */
 
 #home {
-    background-color: #1e1e2f; /* Dark background */
-    color: #f8f9fa; /* Light text */
+ 
+     /* Dark background */
+
     padding: 0; /* Remove padding to cover full height */
     height: 100vh; /* Full viewport height */
     display: flex;
@@ -17,7 +18,7 @@
   #home h1 {
     font-size: 3rem;
     font-weight: bold;
-    color: #ff9800;
+    /* color: #ff9800; */
     transition: color 0.3s ease-in-out;
   }
 
@@ -28,7 +29,7 @@
   #home h2, #home h4 {
     margin: 1rem 0;
     font-weight: 500;
-    color: #dcdcdc;
+    /* color: #dcdcdc; */
     transition: transform 0.3s ease-in-out;
   }
 
@@ -42,6 +43,11 @@
     text-align: justify;
     margin-top: 1rem;
     animation: fadeIn 1.5s ease-in-out;
+  }
+  #home p:hover{
+    background-color: inherit; /* Reset to default */
+    color: inherit;           /* Reset to default */
+  
   }
 
   #home img {

@@ -1,6 +1,6 @@
 /* Education Styling */
 #education {
-    background-color: #1e1e2f;
+    /* background-color: #1e1e2f; */
     color: #f8f9fa;
     padding: 3rem 1.5rem;
     border-radius: 10px;
@@ -39,7 +39,7 @@
     flex-direction: row;
     align-items: flex-start;
     margin-bottom: 2rem;
-    background-color: #2e2e3e;
+    /* background-color: #2e2e3e; */
     border-radius: 10px;
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -72,9 +72,10 @@
 
   .timeline-content p {
     font-size: 1rem;
-    color: #dcdcdc;
+    /* color: #dcdcdc; */
     margin: 0.5rem 0;
   }
+
 
   /* Animations */
   @keyframes fadeInUp {
