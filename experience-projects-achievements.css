@@ -198,3 +198,6 @@
     height: 160px; /* Further reduce height for large screens */
   }
 }
+#achievements{
+  padding-top: 5vh;
+}
