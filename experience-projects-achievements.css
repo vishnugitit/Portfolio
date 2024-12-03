@@ -113,3 +113,88 @@
           font-size: 0.85em;
         }
       }
+
+/* General Styling for Card Images */
+#card-img {
+  width: 100%; /* Full width of the card */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: contain; /* Ensure the full image is displayed */
+  object-position: center; /* Center the image */
+  border-radius: 8px; /* Rounded corners for a professional look */
+  background-color: #f3f3f3; /* Fallback background for missing images */
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Images */
+#card-img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+ 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
+}
+
+/* Medium Screens */
+@media (min-width: 768px) {
+  #card-img {
+    height: 180px; /* Slightly smaller height for medium screens */
+  }
+}
+
+/* Large Screens */
+@media (min-width: 992px) {
+  #card-img {
+    height: 160px; /* Further reduce height for large screens */
+  }
+}
+
+
+/* General Styling for Cards */
+#card {
+  width: 100%;
+  max-width: 420px; /* Slightly increased card width */
+  margin-bottom: 20px;
+  border-radius: 12px; /* Added border radius */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Default shadow */
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Increased padding for better readability */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Cards */
+#card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+ 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* General Styling for Card Images */
+#card-img {
+  width: 100%; /* Full width of the card */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: contain; /* Ensure the full image is displayed */
+  object-position: center; /* Center the image */
+  border-radius: 8px; /* Rounded corners for a professional look */
+  background-color: #f3f3f3; /* Fallback background for missing images */
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Images */
+#card-img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+ 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
+}
+
+/* Medium Screens */
+@media (min-width: 768px) {
+  #card-img {
+    height: 180px; /* Slightly smaller height for medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  #card-img {
+    height: 160px; /* Further reduce height for large screens */
+  }
+}

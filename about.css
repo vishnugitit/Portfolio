@@ -1,4 +1,5 @@
 /* About Styling */
+
 header{
     padding: 4rem 1rem; /* Adjust padding for header */
     /* background-color: #ffffff; */
@@ -8,7 +9,6 @@ header{
     align-items: center;
     height: 100vh; /* Full height for header */
 }
-
 .container-about {
     display: flex;
     justify-content: center;
@@ -17,6 +17,7 @@ header{
     height: 100%; /* Ensure container takes full height */
     max-width: 1200px; /* Max width for large screens */
     width: 100%; /* Full width */
+  
   }
 
   .section-title {
@@ -86,7 +87,7 @@ header{
   }
 
   /* Responsive Design */
-  @media (max-width: 992px) {
+  @media (max-width: 992px) {  
     .about-content {
       flex-direction: column-reverse; /* Switch to column layout with image below text */
       align-items: center;
@@ -226,7 +227,6 @@ header{
       padding: 0.6rem 1.5rem;
   }
 }
-
 
 
 
