@@ -215,7 +215,7 @@ header{
 
 @media (max-width: 576px) {
   .about-text {
-    padding-top: 5vh;
+  
       font-size: 0.9rem;
   }
 
